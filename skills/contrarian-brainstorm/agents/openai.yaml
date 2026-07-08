@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contrarian Brainstorm"
+  short_description: "Structured multi-agent idea critique"
+  default_prompt: "Use $contrarian-brainstorm to compare competing directions before we choose an implementation path."
