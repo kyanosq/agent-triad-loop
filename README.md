@@ -8,6 +8,15 @@ Collection version: `0.1.0`
 
 `contrarian` is a personal collection of portable agent skills for structured disagreement, implementation loops, and adversarial review. Each skill lives under `skills/<skill-name>` and can be symlinked into agent runtimes such as Codex and Cursor.
 
+### Design Ideas
+
+`contrarian` is based on portable agent-workflow patterns rather than a specific model provider:
+
+- Subagent context isolation: planning, implementation, critique, and synthesis can run in separate agent contexts so each role keeps its own assumptions and evidence.
+- Adversarial collaboration networks: agents cross-examine proposals, generate alternatives, red-team assumptions, and force decisions to survive structured disagreement.
+- Evidence-driven iteration: loops advance or stop based on acceptance criteria, real-environment validation, and consecutive-noise thresholds instead of confidence alone.
+- Runtime portability: skills are plain Markdown instructions with optional agent metadata, so the same workflows can be installed into multiple agent runtimes.
+
 ### Skills
 
 | Skill | Version | Purpose |
@@ -60,6 +69,15 @@ Use contrarian-review on this feature. Target correctness regressions and stop a
 ## 简体中文
 
 `contrarian` 是一个个人 agent skills 集合，中文名“杠精”。它用于结构化反对意见、迭代实现和对抗性审查。每个 skill 都放在 `skills/<skill-name>` 下，可以软链接安装到 Codex、Cursor 等 agent runtime。
+
+### 设计思路
+
+`contrarian` 参考的不是某个模型厂商，而是一组可迁移的 agent 工作模式：
+
+- 子智能体上下文隔离：规划、实现、批判、综合可以放在不同 agent 上下文中运行，让每个角色保留自己的假设、证据和判断边界。
+- 对抗式协作网络：不同角色会交叉质询方案、提出替代路径、红队审查假设，让决策经得起结构化反对意见。
+- 证据驱动迭代：循环是否推进或停止，取决于验收标准、真实环境验证和连续噪音发现阈值，而不是单纯依赖“看起来可以”。
+- 多 runtime 可移植：skill 使用普通 Markdown 指令和可选 agent 元数据，因此同一套流程可以安装到多个 agent runtime。
 
 ### Skills
 
