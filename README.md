@@ -35,6 +35,18 @@ cp -R skill/agent-triad-loop ~/.codex/skills/
 cp -R skill/agent-triad-loop ~/.cursor/skills/
 ```
 
+### Usage
+
+Start a new agent session and explicitly ask it to use the skill:
+
+```text
+Use agent-triad-loop for this project.
+Start as Planner, create docs/agent-triad-loop/plan.md, feature_list.json, and the first sprint contract.
+Then run the Generator -> Evaluator loop until the agreed acceptance criteria pass or the iteration cap is reached.
+```
+
+For environments with separate agents, assign Planner, Generator, and Evaluator to separate contexts. For single-agent environments, ask the agent to rotate roles and write each role's output to disk before switching.
+
 ### Core Artifact Contract
 
 Use ordinary project files as the shared interface between agents:
@@ -79,6 +91,18 @@ Any runtime can implement the loop as long as roles honor those files and do not
 cp -R skill/agent-triad-loop ~/.codex/skills/
 cp -R skill/agent-triad-loop ~/.cursor/skills/
 ```
+
+### 启动方式
+
+开启一个新的 agent 会话，并明确要求它使用这个 skill：
+
+```text
+使用 agent-triad-loop 来开发这个项目。
+先以 Planner 身份创建 docs/agent-triad-loop/plan.md、feature_list.json 和第一个 sprint contract。
+然后按 Generator -> Evaluator 循环迭代，直到约定的验收标准通过，或达到迭代上限。
+```
+
+如果环境支持多个 agent，就把 Planner、Generator、Evaluator 分配到独立上下文。如果环境只有单 agent，就要求它进行角色轮换，并在每次切换角色前把当前角色产物写入文件。
 
 ### 核心交接文件
 
